@@ -61,7 +61,7 @@
     <main class="wrap legal">
       <p class="eyebrow">Kishenya</p>
       <h1>Privacy policy</h1>
-      <p class="legal__date">Effective 15 November 2026</p>
+      <p class="legal__date">Effective 16 November 2026</p>
 
 
       <div class="legal__callout">
@@ -85,12 +85,13 @@
       <p>You only need an account for AI parsing (and cloud sync, where it’s offered). You can sign in with email and password, Google, or Apple. I store your email address, your name if Google or Apple passes it, an account ID, and which sign-in method you used. Passwords are stored only as a secure hash by the sign-in service. With Sign in with Apple you can hide your real email address.</p>
 
       <h3 id="ai">AI parsing</h3>
-      <p>Kishenya first tries to understand a phrase on your iPhone. Only when it can’t, and only if you are signed in, the app sends this to my server:</p>
+      <p>Kishenya first tries to understand a phrase on your iPhone. Only when it can’t, only if you are signed in, and only after you allow it, the app sends this to my server:</p>
       <ul>
         <li>the phrase you typed or dictated (up to 500 characters),</li>
         <li>today’s date, your base currency, the currency codes you use and the app’s language,</li>
         <li>the names of your categories and accounts, so the answer can use them.</li>
       </ul>
+      <p>The first time a phrase needs AI, the app asks you first and shows what would be sent, who gets it and what is kept. Nothing is sent until you tap <strong>Allow</strong>. If you tap <strong>Not now</strong>, the app keeps working with what your iPhone understood. You can turn AI parsing on or off at any time in Settings → AI parsing.</p>
       <p>My server passes this to <strong>OpenAI</strong> to get the amount, category, account, note and date back, and returns the result to the app. I don’t store the phrase or the result. I store how many AI requests your account made each day, to enforce the limit of 100 a day. OpenAI processes the request as my service provider. It says that data sent through its API isn’t used to train its models and may be kept for up to 30 days to detect abuse.</p>
 
       <h3 id="sync">Cloud sync (only if it’s enabled for your account)</h3>
@@ -144,7 +145,8 @@
 
       <h2 id="delete">Deleting your data</h2>
       <p><strong>On your iPhone:</strong> deleting the app deletes all its data. Export a backup first if you want to keep it.</p>
-      <p><strong>Your account:</strong> email <a href="mailto:kishenyasupport@gmail.com?subject=Kishenya%3A%20delete%20my%20account">kishenyasupport@gmail.com</a> from the address you signed in with. Your account and everything stored with it on my server (synced data, AI request counts, and the account ID on your bug reports) are deleted within 30 days.</p>
+      <p><strong>Your account:</strong> in Settings, tap <strong>Delete account</strong> in the account card at the top. This deletes your account and everything stored with it on my server right away: synced data, AI request counts, and the account ID on your bug reports (the reports themselves stay, without it). If you signed in with Apple, Apple asks you to confirm, and the app revokes Kishenya’s access to your Apple ID. The data on your iPhone stays; delete the app to remove it. Deleting needs an internet connection.</p>
+      <p>You can also email <a href="mailto:kishenyasupport@gmail.com?subject=Kishenya%3A%20delete%20my%20account">kishenyasupport@gmail.com</a> from the address you signed in with, and I’ll delete your account within 30 days.</p>
 
       <h2>Your rights</h2>
       <p>Depending on where you live (for example under the GDPR, the UK GDPR or Ukraine’s law on personal data protection), you can ask to see, correct, export or delete your personal data, object to its use, or restrict it. Email me and I’ll answer within 30 days. Settings → Backup &amp; restore gives you a full copy of what’s on your iPhone at any time. You can also complain to your data protection authority.</p>
