@@ -61,11 +61,11 @@
     <main class="wrap legal">
       <p class="eyebrow">Kishenya</p>
       <h1>Privacy policy</h1>
-      <p class="legal__date">Effective 16 November 2026</p>
+      <p class="legal__date">Effective 17 November 2026</p>
 
 
       <div class="legal__callout">
-        <p><strong>The short version.</strong> Your entries, accounts, categories and budgets are stored on your iPhone. You can use Kishenya without an account and offline. Data leaves your phone only for the optional features below: an account and AI parsing, cloud sync, and bug reports you choose to send. There are no ads, no analytics and no tracking, and your data is never sold.</p>
+        <p><strong>The short version.</strong> Your entries, accounts, categories and budgets are stored on your iPhone. You can use Kishenya without an account and offline. Data leaves your phone only for the optional features below: an account and AI parsing, cloud sync, the Pro subscription, and bug reports you choose to send. There are no ads, no analytics and no tracking, and your data is never sold.</p>
       </div>
 
       <h2>Who is responsible</h2>
@@ -97,6 +97,15 @@
       <h3 id="sync">Cloud sync (only if it’s enabled for your account)</h3>
       <p>When sync is on, your accounts, categories, entries (including notes) and budgets are copied to my server so they appear on your other devices. Each row is tied to your account, and database rules let only your account read it.</p>
 
+      <h3 id="purchases">The Pro subscription (only if you buy it)</h3>
+      <p>You buy Pro through Apple’s App Store. Apple takes the payment, and your card details never reach me or my service providers. To check purchases and renewals, the app uses <strong>RevenueCat</strong>, which processes purchase data as my service provider. RevenueCat receives:</p>
+      <ul>
+        <li>your account ID, so the subscription is tied to your Kishenya account,</li>
+        <li>the purchase details from the App Store: which plan, price and currency, store country, purchase, renewal and expiry dates, transaction IDs, and whether the subscription will renew, was refunded or has a billing problem,</li>
+        <li>technical details (such as the app and iOS version and the device language) and your network address, like any request on the internet.</li>
+      </ul>
+      <p>RevenueCat tells my server when your subscription starts, renews or ends. My server keeps the current state (plan, status, expiry date, the App Store’s original transaction ID) with your account, to turn Pro features on or off. RevenueCat never receives your entries, notes, amounts, balances, or account or category names.</p>
+
       <h3 id="bug-reports">Bug reports (only when you send one)</h3>
       <p>Settings → Report a bug sends:</p>
       <ul>
@@ -116,8 +125,9 @@
             <tr><th>Provider</th><th>What for</th><th>Where</th></tr>
           </thead>
           <tbody>
-            <tr><td>Supabase</td><td>accounts and sign-in, the server for AI parsing and bug reports, cloud sync storage</td><td>London, United Kingdom</td></tr>
+            <tr><td>Supabase</td><td>accounts and sign-in, the server for AI parsing and bug reports, cloud sync storage, subscription status</td><td>London, United Kingdom</td></tr>
             <tr><td>OpenAI</td><td>AI parsing of phrases</td><td>United States</td></tr>
+            <tr><td>RevenueCat</td><td>processing subscription purchases and renewals</td><td>United States</td></tr>
             <tr><td>Telegram</td><td>delivering bug reports to me</td><td>see Telegram’s policy</td></tr>
             <tr><td>Google, Apple</td><td>sign-in, if you choose them</td><td>see their policies</td></tr>
             <tr><td>Expo (650 Industries)</td><td>delivering app updates</td><td>United States</td></tr>
@@ -134,18 +144,20 @@
       </ul>
 
       <h2>Why I may use your data (legal basis)</h2>
-      <p>Account, AI parsing and sync: to provide the features you ask for (performance of a contract). Bug reports: to fix problems you report (your request and my legitimate interest in a working app). Request limits and the hashed network address: my legitimate interest in preventing abuse.</p>
+      <p>Account, AI parsing, sync and the Pro subscription: to provide the features you ask for and pay for (performance of a contract). Bug reports: to fix problems you report (your request and my legitimate interest in a working app). Request limits and the hashed network address: my legitimate interest in preventing abuse.</p>
 
       <h2>How long data is kept</h2>
       <ul>
-        <li>Account, synced data and AI request counts: until you delete your account.</li>
+        <li>Account, synced data, AI request counts and subscription status: until you delete your account.</li>
+        <li>Purchase records at RevenueCat: as long as RevenueCat needs them to check your subscription, or until you ask me to delete them (see below). Apple keeps its own records of your purchases.</li>
         <li>Bug reports and screenshots: until the problem is handled, and no longer than 12 months.</li>
         <li>Phrases sent for AI parsing: not stored by me. OpenAI: see above.</li>
       </ul>
 
       <h2 id="delete">Deleting your data</h2>
       <p><strong>On your iPhone:</strong> deleting the app deletes all its data. Export a backup first if you want to keep it.</p>
-      <p><strong>Your account:</strong> in Settings, tap <strong>Delete account</strong> in the account card at the top. This deletes your account and everything stored with it on my server right away: synced data, AI request counts, and the account ID on your bug reports (the reports themselves stay, without it). If you signed in with Apple, Apple asks you to confirm, and the app revokes Kishenya’s access to your Apple ID. The data on your iPhone stays; delete the app to remove it. Deleting needs an internet connection.</p>
+      <p><strong>Your account:</strong> in Settings, tap <strong>Delete account</strong> in the account card at the top. This deletes your account and everything stored with it on my server right away: synced data, AI request counts, subscription status, and the account ID on your bug reports (the reports themselves stay, without it). If you signed in with Apple, Apple asks you to confirm, and the app revokes Kishenya’s access to your Apple ID. The data on your iPhone stays; delete the app to remove it. Deleting needs an internet connection.</p>
+      <p><strong>Your subscription:</strong> deleting your account doesn’t cancel a Pro subscription, because Apple bills it. Cancel it in your iPhone’s Settings → your name → Subscriptions. Deleting the account also doesn’t remove the purchase records at RevenueCat. To have them deleted, email me and I’ll delete them within 30 days.</p>
       <p>You can also email <a href="mailto:kishenyasupport@gmail.com?subject=Kishenya%3A%20delete%20my%20account">kishenyasupport@gmail.com</a> from the address you signed in with, and I’ll delete your account within 30 days.</p>
 
       <h2>Your rights</h2>
