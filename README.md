@@ -29,3 +29,11 @@ iPhone 18 Pro Max simulator (1320 × 2868) with the sample data from
 (`cwebp -q 86 -resize 660 0`). Status bar set to 9:41 with
 `xcrun simctl status_bar … override`. For the dark Reports shot the simulator
 itself is in dark appearance too. Retake them when the app's screens change.
+
+## Changing `style.css`
+
+GitHub Pages serves files with `cache-control: max-age=600`, so a browser can pair
+new HTML with a stale stylesheet for up to ten minutes (on 2026-11-22 that showed
+the new screenshots zoomed and cropped). Both pages load `style.css?v=<date>`:
+change that `v` in `index.html` and `privacy/index.html` whenever `style.css`
+changes.
