@@ -20,3 +20,12 @@ GitHub Pages, deployed from `main` / root. Push to `main` and it is live in a mi
 When the app changes what data it sends (new provider, account deletion in the app,
 the AI consent sheet), update `privacy/index.html` and its "Effective" date, and the
 help answers in `index.html`.
+
+## App screenshots
+
+`screens/*.webp` are real captures of the app, not mockups: a Release build on an
+iPhone 18 Pro Max simulator (1320 × 2868) with the sample data from
+`scripts/demo-backup.mjs` in the app repo, resized to 660 px wide WebP
+(`cwebp -q 86 -resize 660 0`). Status bar set to 9:41 with
+`xcrun simctl status_bar … override`. For the dark Reports shot the simulator
+itself is in dark appearance too. Retake them when the app's screens change.
