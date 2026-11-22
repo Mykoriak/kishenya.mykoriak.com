@@ -61,11 +61,11 @@
     <main class="wrap legal">
       <p class="eyebrow">Kishenya</p>
       <h1>Privacy policy</h1>
-      <p class="legal__date">Effective 16 November 2026</p>
+      <p class="legal__date">Effective 22 November 2026</p>
 
 
       <div class="legal__callout">
-        <p><strong>The short version.</strong> Your entries, accounts, categories and budgets are stored on your iPhone. You can use Kishenya without an account and offline. Data leaves your phone only for the optional features below: an account and AI parsing, cloud sync, and bug reports you choose to send. There are no ads, no analytics and no tracking, and your data is never sold.</p>
+        <p><strong>The short version.</strong> Your entries, accounts, categories and budgets are stored on your iPhone. You can use Kishenya without an account and offline. Data leaves your phone only for the optional features below: an account and AI parsing, the Kishenya Pro subscription and its cloud sync, and bug reports you choose to send. There are no ads, no analytics and no tracking, and your data is never sold.</p>
       </div>
 
       <h2>Who is responsible</h2>
@@ -82,7 +82,7 @@
       <h2>When data leaves your iPhone</h2>
 
       <h3 id="account">An account (optional)</h3>
-      <p>You only need an account for AI parsing (and cloud sync, where it’s offered). You can sign in with email and password, Google, or Apple. I store your email address, your name if Google or Apple passes it, an account ID, and which sign-in method you used. Passwords are stored only as a secure hash by the sign-in service. With Sign in with Apple you can hide your real email address.</p>
+      <p>You only need an account for AI parsing and for Kishenya Pro. You can sign in with email and password, Google, or Apple. I store your email address, your name if Google or Apple passes it, an account ID, and which sign-in method you used. Passwords are stored only as a secure hash by the sign-in service. With Sign in with Apple you can hide your real email address.</p>
 
       <h3 id="ai">AI parsing</h3>
       <p>Kishenya first tries to understand a phrase on your iPhone. Only when it can’t, only if you are signed in, and only after you allow it, the app sends this to my server:</p>
@@ -92,9 +92,20 @@
         <li>the names of your categories and accounts, so the answer can use them.</li>
       </ul>
       <p>The first time a phrase needs AI, the app asks you first and shows what would be sent, who gets it and what is kept. Nothing is sent until you tap <strong>Allow</strong>. If you tap <strong>Not now</strong>, the app keeps working with what your iPhone understood. You can turn AI parsing on or off at any time in Settings → AI parsing.</p>
-      <p>My server passes this to <strong>OpenAI</strong> to get the amount, category, account, note and date back, and returns the result to the app. I don’t store the phrase or the result. I store how many AI requests your account made each day, to enforce the limit of 100 a day. OpenAI processes the request as my service provider. It says that data sent through its API isn’t used to train its models and may be kept for up to 30 days to detect abuse.</p>
+      <p>My server passes this to <strong>OpenAI</strong> to get the amount, category, account, note and date back, and returns the result to the app. I don’t store the phrase or the result. I store how many AI requests your account made each day, to enforce the daily limit (10 a day, or 100 with Kishenya Pro). OpenAI processes the request as my service provider. It says that data sent through its API isn’t used to train its models and may be kept for up to 30 days to detect abuse.</p>
 
-      <h3 id="sync">Cloud sync (only if it’s enabled for your account)</h3>
+      <h3 id="pro">Kishenya Pro (optional subscription)</h3>
+      <p>Kishenya Pro is a monthly or yearly subscription that adds cloud sync and a higher AI limit. You buy it through Apple’s App Store with your Apple ID. Apple handles the payment, and I never see your card or payment details.</p>
+      <p>The purchase is linked to your Kishenya account. The app uses <strong>RevenueCat</strong> to check purchases with Apple and to tell my server about them. RevenueCat receives:</p>
+      <ul>
+        <li>your account ID (a random ID, not your email or name),</li>
+        <li>the App Store purchase details: which plan, the transaction ID, the purchase, renewal and expiry dates, the price and currency, and the App Store country,</li>
+        <li>technical details such as the app and iOS version and the device’s language.</li>
+      </ul>
+      <p>If you open the Pro screen before signing in, the app loads the prices under a random ID that RevenueCat links to your account once you sign in. My server keeps your current plan, its status (for example active, in a billing grace period or expired), its expiry date, whether it renews, and the transaction ID, so that sync turns on and off with the subscription.</p>
+      <p>To cancel, use your Apple ID’s subscription settings (Settings in the app → account card → Manage subscription). Deleting your Kishenya account doesn’t cancel the subscription.</p>
+
+      <h3 id="sync">Cloud sync (with Kishenya Pro)</h3>
       <p>When sync is on, your accounts, categories, entries (including notes) and budgets are copied to my server so they appear on your other devices. Each row is tied to your account, and database rules let only your account read it.</p>
 
       <h3 id="bug-reports">Bug reports (only when you send one)</h3>
@@ -118,6 +129,8 @@
           <tbody>
             <tr><td>Supabase</td><td>accounts and sign-in, the server for AI parsing and bug reports, cloud sync storage</td><td>London, United Kingdom</td></tr>
             <tr><td>OpenAI</td><td>AI parsing of phrases</td><td>United States</td></tr>
+            <tr><td>RevenueCat</td><td>checking Kishenya Pro purchases with Apple</td><td>United States</td></tr>
+            <tr><td>Apple</td><td>payment for Kishenya Pro, through the App Store</td><td>see Apple’s policy</td></tr>
             <tr><td>Telegram</td><td>delivering bug reports to me</td><td>see Telegram’s policy</td></tr>
             <tr><td>Google, Apple</td><td>sign-in, if you choose them</td><td>see their policies</td></tr>
             <tr><td>Expo (650 Industries)</td><td>delivering app updates</td><td>United States</td></tr>
@@ -134,18 +147,19 @@
       </ul>
 
       <h2>Why I may use your data (legal basis)</h2>
-      <p>Account, AI parsing and sync: to provide the features you ask for (performance of a contract). Bug reports: to fix problems you report (your request and my legitimate interest in a working app). Request limits and the hashed network address: my legitimate interest in preventing abuse.</p>
+      <p>Account, AI parsing, Kishenya Pro and sync: to provide the features you ask for and pay for (performance of a contract). Bug reports: to fix problems you report (your request and my legitimate interest in a working app). Request limits and the hashed network address: my legitimate interest in preventing abuse.</p>
 
       <h2>How long data is kept</h2>
       <ul>
-        <li>Account, synced data and AI request counts: until you delete your account.</li>
+        <li>Account, synced data, AI request counts and subscription status: until you delete your account.</li>
+        <li>RevenueCat’s purchase record: until I delete it there. It is linked only to the random account ID. Email me and I’ll delete it, also after you delete your account.</li>
         <li>Bug reports and screenshots: until the problem is handled, and no longer than 12 months.</li>
         <li>Phrases sent for AI parsing: not stored by me. OpenAI: see above.</li>
       </ul>
 
       <h2 id="delete">Deleting your data</h2>
       <p><strong>On your iPhone:</strong> deleting the app deletes all its data. Export a backup first if you want to keep it.</p>
-      <p><strong>Your account:</strong> in Settings, tap <strong>Delete account</strong> in the account card at the top. This deletes your account and everything stored with it on my server right away: synced data, AI request counts, and the account ID on your bug reports (the reports themselves stay, without it). If you signed in with Apple, Apple asks you to confirm, and the app revokes Kishenya’s access to your Apple ID. The data on your iPhone stays; delete the app to remove it. Deleting needs an internet connection.</p>
+      <p><strong>Your account:</strong> in Settings, tap <strong>Delete account</strong> in the account card at the top. This deletes your account and everything stored with it on my server right away: synced data, AI request counts, subscription status, and the account ID on your bug reports (the reports themselves stay, without it). If you signed in with Apple, Apple asks you to confirm, and the app revokes Kishenya’s access to your Apple ID. The data on your iPhone stays; delete the app to remove it. Deleting needs an internet connection. It doesn’t cancel a Kishenya Pro subscription: cancel that in your Apple ID’s subscription settings.</p>
       <p>You can also email <a href="mailto:kishenyasupport@gmail.com?subject=Kishenya%3A%20delete%20my%20account">kishenyasupport@gmail.com</a> from the address you signed in with, and I’ll delete your account within 30 days.</p>
 
       <h2>Your rights</h2>
